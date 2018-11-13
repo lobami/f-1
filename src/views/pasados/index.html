@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--FAVOR DE COMENTAR TODO EL CODIGO-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <% include partials/head.html %>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content animated flash">
+            <img src="img/logo.jpg" alt="Logo" class="logo">
+            <div class="title">
+                <%= title %>
+            </div>
+            <div class="text">
+                En <%= title %> somos expertos en hacer 
+                proyectos una realidad!
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <div class="services text-center">
+        <h3 class="title">Servicios</h3>
+        <div class="container grid-3">
+            <div>
+                <i class="fab fa-react fa-5x"></i>
+                <h3>React</h3>
+                <div>
+                    Aplicaciones a la medida basadas en react y react native.
+                </div>
+            </div>
+            <div>
+                <i class="fab fa-angular fa-5x"></i>
+                <h3>Paginas web</h3>
+                <div>
+                    Paginas web de una sola pagina gracias a la tecnologia de Angular.
+                </div>
+            </div>
+            <div>
+                <i class="fab fa-php fa-5x"></i>
+                <h3>Conocidos</h3>
+                <div>
+                    Paginas web con las tecnologias clasicas.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about bg-light">
+        <div class="container text-center">
+            <div class="grid-2">
+                <div class="center">
+                    <i class="fas fa-code fa-10x"></i>
+                </div>
+                <div>
+                    <h3 class="title">Progamming </h3>
+                    <p>
+                        <span>Amet nihil magnam maxime dolor qui veritatis quaerat explicabo fugiat similique. Facilis
+                            ea reprehenderit laboriosam molestias odit officia. Facilis sunt harum tempore suscipit
+                            placeat beatae? Autem iure dignissimos maxime ducimus.</span>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section>
+        <div class="container text-center">
+            <div class="grid-2">
+                <div>
+                    <h3 class="title">Acerca de <%= title %></h3>
+                    <p>
+                        <span>Somos un grupo de desarrolladores estudiantes de
+                            la facultad de informatica de la UAQ  expertos en el front y backend 
+                            con las herramientas y el conocimiento para hacer su proyecto realidad.</span>
+                    </p>
+                </div>
+                <div class="center">
+                    <i class="fab fa-node-js fa-10x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center bg-light">
+        <p> <%= title %> &copy; 2018 - All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>

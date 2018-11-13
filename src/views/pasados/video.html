@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> <%= title %></title>
+    <% include partials/head.html %>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+  </head>
+  <body>
+    <header class="header content">
+      <div class="header-video">
+        <video src="img/intro.mp4" autoplay loop></video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <h1><%= title %></h1>
+        <p></p>
+        <a href="views/p.html" class="btn">Vamos a <%= title %></a>
+      </div>
+    </header>
+  </body>
+</html>
