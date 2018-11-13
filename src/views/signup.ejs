@@ -1,9 +1,11 @@
 <% if (signupMessage) { %>
 
-    <div><%= signupMessage %></div>
+<div>
+    <%= signupMessage %>
+</div>
 <% } %>
 
-<form action="/signup" method="POST"> 
+<form action="/signup" method="POST">
     <input type="email" name="email" placeholder="Correo electronico">
     <input type="password" name="password" placeholder="contraseña">
 
@@ -11,3 +13,72 @@
         Registrar colaborador
     </button>
 </form>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title %>
+    </title>
+    <% include partials/hear.html %>
+</head>
+
+<body>
+    <% include partials/navigation.html %>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-sm-4 offset-md-4">
+                <div class="card animated flipInY">
+                    <div class="card-header bg-dark text-white text-center">
+                        <h3>Registrar colaborador</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/signup" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="name" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="subname" placeholder="Apellidos">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="date" name="fechaNacimiento" placeholder="Fecha de Nacimiento">
+                            </div>
+
+                            <div class="form-group">
+                                
+                                <select id="inputState" name="sexo" class="form-control">
+                                    <option selected>Sexo</option>
+                                    <option>Hombre</option>
+                                    <option>Mujer</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" placeholder="Contraseña">
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+</body>
+
+</html>

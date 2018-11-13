@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
   }));
   
   router.get('/profile',isAuthenticated, (req, res, next) => {
-    res.render('profile')
+    res.render('profile', {title: "Perfil" })
     
   });
 
