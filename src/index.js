@@ -11,6 +11,9 @@ const app = express();
 require('./database');
 require('./passport/local-auth');
 
+// connection to db list
+//mongoose.connect('mongodb://localhost/adhoc-dev')
+  
 // settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'))
