@@ -5,8 +5,12 @@
 
   <div class="row">
     <!--FORM-->
+    <div class="container p-5"></div>
     <div class="col-md-3">
-      <div class="card">
+      <div class="card animated flipInY">
+        <div class="card-header bg-dark text-white text-center">
+          <h3>¿Que hay?</h3>
+        </div>
         <div class="card-body">
           <form action="/add" method="post">
             <div class="form-group">
@@ -16,20 +20,19 @@
               <input class="form-control" type="text" name="name" placeholder="Colaborador">
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="description" cols="80"
-                placeholder="¿Que se tiene que hacer?"
-                ></textarea>
+              <textarea class="form-control" name="description" cols="80" placeholder="¿Que se tiene que hacer?"></textarea>
             </div>
             <div class="form-group">
               <input class="form-control" type="date" name="date" placeholder="Tarea">
             </div>
-            
+
             <button class="btn btn-primary" type="submit">
-              Add
+              Añadir tarea
             </button>
           </form>
         </div>
       </div>
+
     </div>
 
     <!-- LIST -->
@@ -43,30 +46,35 @@
             <th>Descripcion</th>
             <th>Fecha limite</th>
             <th>Acciones</th>
-            
+
           </tr>
         </thead>
         <tbody>
           <% for(var i=0; i < tasks.length; i++) { %>
-            <tr>
-              <td><%= i + 1%></td>
-              <td><strong><%= tasks[i].title %></strong></td>
-              <td><%= tasks[i].name %></strong></td>
-              <td><%= tasks[i].description %></td>
-              <td><%= tasks[i].date %></td>
-              <td>
-                <a
-                  class="<%= tasks[i].status ? 'btn btn-success' : 'btn btn-dark'%>"
-                  href="/turn/<%= tasks[i]._id %>">Done</a>
-                <a href="/delete/<%= tasks[i]._id %>"
-                  class="btn btn-danger">
-                  Delete
-                </a>
-                <a href="/edit/<%= tasks[i]._id %>" class="btn btn-info">
-                  Edit
-                </a>
-              </td>
-            </tr>
+          <tr>
+            <td>
+              <%= i + 1%>
+            </td>
+            <td><strong>
+                <%= tasks[i].title %></strong></td>
+            <td>
+              <%= tasks[i].name %></strong></td>
+            <td>
+              <%= tasks[i].description %>
+            </td>
+            <td>
+              <%= tasks[i].date %>
+            </td>
+            <td>
+              <a class="<%= tasks[i].status ? 'btn btn-success' : 'btn btn-dark'%>" href="/turn/<%= tasks[i]._id %>">Listo</a>
+              <a href="/delete/<%= tasks[i]._id %>" class="btn btn-danger">
+                Eliminar
+              </a>
+              <a href="/edit/<%= tasks[i]._id %>" class="btn btn-info">
+                Editar
+              </a>
+            </td>
+          </tr>
           <% } %>
         </tbody>
       </table>
